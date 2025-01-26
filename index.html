@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bg-[#2973B2] text-white">
+        <nav class="flex items-center justify-between p-4">
+            <!-- Logo -->
+            <div class="text-xl font-bold">
+                BillboardCo
+            </div>
+
+            <!-- Navigation Links -->
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="hover:text-gray-200">Home</a>
+                <a href="#services" class="hover:text-gray-200">Services</a>
+                <a href="#about" class="hover:text-gray-200">About</a>
+                <a href="#contact" class="hover:text-gray-200">Contact</a>
+                <a href="gallery.html" class="hover:text-gray-200">Gallery</a>
+                <a href="Packages.html" class="hover:text-gray-200">Packages</a>
+                <a href="Testimonials.html" class="hover:text-gray-200">Testimonials</a>
+            </div>
+
+
+            <!-- Hamburger Menu -->
+            <div class="md:hidden">
+                <button id="menu-btn" class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <!-- Creating a Mobile menu That will appear with the toggle button is clicked -->
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#2973B2]">
+            <a href="#home" class="block px-4 py-2 hover:bg-[#1e5f8a]">Home</a>
+            <a href="#services" class="block px-4 py-2 hover:bg-[#1e5f8a]">Services</a>
+            <a href="#about" class="block px-4 py-2 hover:bg-[#1e5f8a]">About</a>
+            <a href="#contact" class="block px-4 py-2 hover:bg-[#1e5f8a]">Contact</a>
+            <a href="gallery.html" class="block px-4 py-2 hover:bg-[#1e5f8a]">Gallery</a>
+            <a href="Packages.html" class="block px-4 py-2 hover:bg-[#1e5f8a]">Packages</a>
+            <a href="Testimonials.html" class="block px-4 py-2 hover:bg-[#1e5f8a]">Testimonials</a>
+        </div>
+    </div>
+    <!-- Using JavaScipt and Event Listening to toggle the menu/dropdown upon Clicking
+       the Hamburger Menu Icon -->
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden'); // Toggles the hidden class
+        });
+    </script>
+    <!-- Adding a hero secion with a background image of a billboard on a freeway
+       and overlayed text -->
+    <div class="relative bg-cover bg-center h-screen"
+        style="background-image: url('Assets/pawel-czerwinski-_9dSF0Hwitw-unsplash.jpg');">
+        <!-- Overlay -->
+        <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+
+        <!-- Text Content -->
+        <div class="relative z-10 flex flex-col items-center justify-center h-full text-center text-white px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">
+                Your Absolute Advertising Solution Today
+            </h1>
+            <p class="text-lg md:text-xl">
+                Stand out from the crowd with impactful billboard advertising.
+            </p>
+        </div>
+    </div>
+    <!-- adding a services section -->
+    <section id="services" class="bg-white py-16">
+        <div class="max-w-7xl mx-auto px-4">
+            <!-- Section Heading -->
+            <h2 class="text-3xl md:text-4xl font-bold text-center text-[#2973B2] mb-12">
+                Our Services
+            </h2>
+
+            <!-- Services Grid -->
+            <div class="grid gap-8 md:grid-cols-3">
+                <!-- Service Card 1 -->
+                <div class="bg-gray-100 shadow-lg rounded-lg p-6 text-center">
+                    <div class="text-[#2973B2] mb-4">
+                        <!-- Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3 10h11M9 21V3m4 18V9m4 12V12m4 9V15" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Digital Billboards</h3>
+                    <p class="text-gray-700">
+                        Advertise on modern digital screens for dynamic, eye-catching campaigns.
+                    </p>
+                </div>
+
+                <!-- Service Card 2 -->
+                <div class="bg-gray-100 shadow-lg rounded-lg p-6 text-center">
+                    <div class="text-[#2973B2] mb-4">
+                        <!-- Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v18m6-6H6m6 6h6M6 6h6" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Static Billboards</h3>
+                    <p class="text-gray-700">
+                        Promote your business with high-quality, impactful static billboards.
+                    </p>
+                </div>
+
+                <!-- Service Card 3 -->
+                <div class="bg-gray-100 shadow-lg rounded-lg p-6 text-center">
+                    <div class="text-[#2973B2] mb-4">
+                        <!-- Icon -->
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-12 h-12 mx-auto" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M7 10l5-5m0 0l5 5m-5-5v12" />
+                        </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Campaign Management</h3>
+                    <p class="text-gray-700">
+                        Let us handle your advertising campaigns from start to finish.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Adding A CAT (call-to-action) Section -->
+    <section class="bg-[#2973B2] py-16">
+        <div class="max-w-7xl mx-auto px-4 text-center text-white">
+            <!-- Heading -->
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">
+                Ready to Take Your Advertising to the Next Level?
+            </h2>
+
+            <!-- Subheading -->
+            <p class="text-lg md:text-xl mb-8">
+                Partner with us for impactful billboard campaigns that drive results. Let's make your brand
+                unforgettable!
+            </p>
+
+            <!-- Call-to-Action Button -->
+            <a href="#contact"
+                class="bg-white text-[#2973B2] font-semibold px-6 py-3 rounded-lg shadow-lg hover:bg-gray-100 transition">
+                Get Started Today
+            </a>
+        </div>
+    </section>
+
+
+</body>
+
+</html>
